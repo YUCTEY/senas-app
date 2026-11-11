@@ -1,0 +1,22 @@
+:root { --bg:#10161d; --panel:#18212b; --borde:#2a3644; --txt:#e8eef5; --acento:#3b82f6; --ok:#22c55e; --mal:#f59e0b; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--txt); font-family:system-ui,sans-serif; padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom); }
+main { max-width:520px; margin:0 auto; padding:12px; display:grid; gap:12px; }
+h1 { font-size:1.2rem; margin:4px 0; }
+.visor { position:relative; aspect-ratio:1; background:#000; border-radius:12px; overflow:hidden; }
+video { width:100%; height:100%; object-fit:cover; display:block; }
+.guia { position:absolute; inset:10%; border:3px dashed rgba(255,255,255,.75); border-radius:10px; pointer-events:none; }
+.fila { display:flex; gap:8px; flex-wrap:wrap; }
+button { flex:1; padding:12px; border:0; border-radius:10px; background:var(--acento); color:#fff; font-size:1rem; font-weight:600; }
+button.sec { background:#2a3644; }
+.panel { background:var(--panel); border:1px solid var(--borde); border-radius:12px; padding:12px; display:grid; gap:8px; }
+.letra { font-size:5rem; font-weight:800; text-align:center; line-height:1; }
+.barra { height:12px; background:#0c131b; border-radius:6px; overflow:hidden; } .barra div { height:100%; transition:width .2s; }
+.estado, .top { margin:0; text-align:center; font-size:.9rem; } .top { opacity:.7; }
+.texto { min-height:3rem; font-size:1.8rem; font-weight:700; letter-spacing:.12em; word-break:break-all; white-space:pre-wrap; }
+.vacio { opacity:.4; font-size:1rem; font-weight:400; letter-spacing:0; }
+.ajustes label { display:grid; gap:4px; font-size:.95rem; } .ajustes .chk { display:flex; align-items:center; gap:8px; }
+select { padding:8px; border-radius:8px; background:#0c131b; color:var(--txt); border:1px solid var(--borde); }
+.mini { display:flex; gap:10px; align-items:center; font-size:.8rem; opacity:.8; } canvas { width:84px; height:84px; image-rendering:pixelated; border:1px solid var(--borde); border-radius:6px; flex:none; }
+.err { color:#f87171; margin:0; }
+.visor canvas.over { position:absolute; inset:0; width:100%; height:100%; border:0; border-radius:0; image-rendering:auto; }
